@@ -23,8 +23,7 @@ if (isset($_POST['username'])){
 	}
 }
 ?>
-<?php echo $conn;
-?>
+
 <form class="box" action="" method="post" name="login">
 <h1 class="box-logo box-title"><a href="https://waytolearnx.com/">WayToLearnX.com</a></h1>
 <h1 class="box-title">Connexion</h1>
