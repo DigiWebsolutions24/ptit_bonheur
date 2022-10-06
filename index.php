@@ -21,12 +21,11 @@
         <h1>Page de connexion</h1>
         <div class="container_connexion" method="POST">
             <form action="connexion.php">
-                <label for="connexion">Identifiant de l'enfant</label><br/>  
+                <label for="login">Identifiant de l'enfant</label><br/>  
                 <input type="text" name="login" value=""><br/>
                 <input type="password" name="pwd" value=""><br/>
                 <input type="submit" name="connexion" value="Conexion"><br/>
             </form>
-            <a href="inscription.php">S'inscrire</a>
         </div>
     </section>
 
