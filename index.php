@@ -27,15 +27,6 @@
                 </tr>
                 <tr>
                 <?php
-                    
-                    $arrivee = $db->query('SELECT DEPARTPREVU FROM enfants');
-                    $depart = $db->query('SELECT ARRIVEEPREVU FROM enfants');
-
-                    $a = new DateTime($depart); 
-                    $b = new DateTime($arrivee); 
-                    $intervalle = $a->diff($b); 
-                    echo $interval->format("%H"); 
-
                     foreach ($db->query('SELECT * FROM enfants') as $row) {
                     echo '<tr> 
                     <td>' .$row['NOM'] . '</td>
