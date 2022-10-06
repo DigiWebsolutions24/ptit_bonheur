@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./env/style.css">
     <?php 
     require ("./env/connect.php");
-    require ("./env/functions.php");
+    require ("./env/connexion.php");
+*
 
     ?>
 </head>
