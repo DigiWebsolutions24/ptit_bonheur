@@ -1,10 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<?php
+﻿<?php
 session_start();
 
 include('config.php');
@@ -31,6 +25,13 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
     }
 }else{
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
 <form class="box" action="" method="post">
 	<h1 class="box-logo box-title"><a href="https://waytolearnx.com/">WayToLearnX.com</a></h1>
     <h1 class="box-title">S'inscrire</h1>
