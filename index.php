@@ -23,7 +23,7 @@
         <form class="box" action="" method="post" name="login">
 <h1 class="box-logo box-title"><a href="https://waytolearnx.com/">MAM Les P'tit Bonheur</a></h1>
 <h1 class="box-title">Connexion</h1>
-<input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
+<input type="text" class="box-input" name="NOM" placeholder="Nom d'utilisateur">
 <input type="submit" value="Connexion " name="submit" class="box-button">
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message; ?></p>
