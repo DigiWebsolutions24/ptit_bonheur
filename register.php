@@ -5,6 +5,8 @@
 </head>
 <body>
 <?php
+session_start();
+
 include('config.php');
 if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
 	// récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire

@@ -5,8 +5,9 @@
 </head>
 <body>
 <?php
-include('config.php');
 session_start();
+
+include('config.php');
 if (isset($_POST['username'])){
 	$username = stripslashes($_REQUEST['username']);
 	$username = mysqli_real_escape_string($conn, $username);
