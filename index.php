@@ -9,49 +9,24 @@
     <link rel="stylesheet" href="./env/style.css">
     <?php 
     require ("./env/connect.php");
+    require ("./env/functions.php");
 
     ?>
 </head>
 
 <body>
-<section>
-        <div>
-            <table>
-                <tr>
-                    <td>Nom de l'enfant</td>
-                    <td>Début du Contrat</td>
-                    <td>Heure semaines</td>
-                    <td>Rémunération</td>
-                    <td>Heures majorée</td>
-                    <td>Frais d'entretien</td>
-                </tr>
-                <tr>
-                <?php
-                    foreach ($db->query('SELECT * FROM enfants') as $row) {
-                    echo '<tr> 
-                    <td>' .$row['NOM'] . '</td>
-                    <td>' .$row['DATE'] . '</td>
-                    <td>' .$nbd . '</td>
-                    <td>' .$row['REMU'] . '</td>
-                    <td>' .$row['HEURESMAJ'] . '</td>
-                    <td>' .$row['FRAIS'] . '</td>
-                    </tr>';
-                    }
 
-                ?>
-            </table>
-        </div>
-    </section>
     <section class="page_connexion">
 
         <h1>Page de connexion</h1>
-        <div class="container_connexion">
-            <form action="POST">
-                <label for="connexion">Identifiant de l'enfant</label>
-                <input type="text">
-                <button>Voir mon enfant</button>
+        <div class="container_connexion" method="POST">
+            <form action="connexion.php">
+                <label for="connexion">Identifiant de l'enfant</label><br/>  
+                <input type="text" name="login" value=""><br/>
+                <input type="password" name="pwd" value=""><br/>
+                <input type="submit" name="connexion" value="Conexion"><br/>
             </form>
-
+            <a href="inscription.php">S'inscrire</a>
         </div>
     </section>
 
