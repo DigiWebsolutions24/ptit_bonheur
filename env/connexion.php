@@ -9,7 +9,7 @@ if (!$connexion) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;}
 mysql_select_db (BDD); print "Connexion BDD reussie puis";echo "<br/>"; 
 //on parcourt la bdd pour chercher l'existence du login mot et du mot de passe saisis par l'internaute 
 //et on range le résultat dans le tableau $data
-$sql = 'SELECT count(*) FROM enfants'.mysql_escape_string($_POST['login']).'"';
+$sql = 'SELECT count(*) FROM enfants'.mysql_escape_string($_POST['login']);
 $req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
 $data = mysql_fetch_array($req);
 mysql_free_result($req);mysql_close();
