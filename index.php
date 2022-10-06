@@ -15,10 +15,6 @@ require ("connect.php");
 </head>
 
 <body>
-    <?php 
-    require ("connect.php");
-
-    ?>
 <section>
         <div>
             <table>
