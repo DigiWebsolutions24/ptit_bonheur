@@ -2,7 +2,7 @@
 session_start();
 
 include('config.php');
-if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
+if (isset($_REQUEST['username'], $_REQUEST['password'])){
 	// récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
 	$username = stripslashes($_REQUEST['username']);
 	$username = mysqli_real_escape_string($conn, $username); 
@@ -10,10 +10,10 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
 	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($conn, $password);
 	//requéte SQL + mot de passe crypté
-    $query = "INSERT into `enfants` (username, password)
+    $queryEnfant = "INSERT into `enfants` (username, password)
               VALUES ('$username', '".hash('sha256', $password)."')";
 	// Exécute la requête sur la base de données
-    $res = mysqli_query($conn, $query);
+    $res = mysqli_query($conn, $queryEnfant);
     if($res){
        echo "<div class='sucess'>
              <h3>Vous êtes inscrit avec succès.</h3>
