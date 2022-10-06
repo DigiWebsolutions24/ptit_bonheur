@@ -11,3 +11,4 @@ $pdo_option->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $liste_enfants = $db->query('SELECT * FROM enfants');
                 
 echo $db;
+>
