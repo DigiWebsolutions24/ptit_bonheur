@@ -1,6 +1,6 @@
 <?php
 //on inclue un fichier contenant nom_de_serveur, nom_bdd, login et password d'accès à la bdd mysql
-include ("connect.php");
+include ("./env/connect.php");
 //on vérifie que le visiteur a correctement saisi puis envoyé le formulaire
 if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {{
 //on se connecte à la bdd
