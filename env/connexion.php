@@ -3,7 +3,7 @@
 include ("connect.php");
 //on vérifie que le visiteur a correctement saisi puis envoyé le formulaire
 if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
-if ((isset($_POST['login']) && !empty($_POST['login'])) && (isset($_POST['pwd']) && !empty($_POST['pwd']))) {
+if ((isset($_POST['login']) && !empty($_POST['login']))) {
 //on se connecte à la bdd
 $connexion = mysql_connect (SERVEUR, LOGIN, MDP);    
 if (!$connexion) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;}
