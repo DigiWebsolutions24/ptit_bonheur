@@ -1,0 +1,26 @@
+tr,
+td {
+    border: black 1px solid;
+    padding: 5px;
+    margin: 5px;
+}
+
+body {
+    height: 100vh;
+    background: #ffe;
+}
+
+.page_connexion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_connexion {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 25px;
+    padding: 50px 25px;
+    margin: auto;
+    background: white;
+}
