@@ -7,7 +7,6 @@
 <?php
 require('config.php');
 session_start();
-
 if (isset($_POST['username'])){
 	$username = stripslashes($_REQUEST['username']);
 	$username = mysqli_real_escape_string($conn, $username);
@@ -23,6 +22,8 @@ if (isset($_POST['username'])){
 		$message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
 	}
 }
+?>
+<?php echo $conn;
 ?>
 <form class="box" action="" method="post" name="login">
 <h1 class="box-logo box-title"><a href="https://waytolearnx.com/">WayToLearnX.com</a></h1>
