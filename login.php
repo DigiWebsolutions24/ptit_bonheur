@@ -1,10 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<?php
+﻿<?php
 session_start();
 
 include('config.php');
@@ -24,6 +18,13 @@ if (isset($_POST['username'])){
 	}
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
 <form class="box" action="" method="post" name="login">
 <h1 class="box-logo box-title"><a href="https://waytolearnx.com/">WayToLearnX.com</a></h1>
