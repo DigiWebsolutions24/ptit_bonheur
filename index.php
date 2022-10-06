@@ -8,9 +8,8 @@
     <title>Les P'tit Bonheur</title>
     <link rel="stylesheet" href="style.css">
     <?php 
-$user = 'digimyshjhweb';
-$pass = 'Digi24Websolutions150';
-$db = new PDO('mysql:host=digimyshjhweb.mysql.db;dbname=digimyshjhweb', $user, $pass);
+    require ("./env/connect.php");
+
     ?>
 </head>
 
