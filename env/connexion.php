@@ -1,5 +1,5 @@
 <?php
-require('./env/connect.php');
+include('./env/connect.php');
 session_start();
 if (isset($_POST['username'])){
   $username = stripslashes($_REQUEST['username']);
