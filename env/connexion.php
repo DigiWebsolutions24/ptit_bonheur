@@ -1,34 +1,17 @@
 <?php
-//on inclue un fichier contenant nom_de_serveur, nom_bdd, login et password d'accès à la bdd mysql
-include ("./env/connect.php");
-//on vérifie que le visiteur a correctement saisi puis envoyé le formulaire
-if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {{
-//on se connecte à la bdd
-$connexion = mysql_connect (SERVEUR, LOGIN);    
-if (!$connexion) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;}
-mysql_select_db (BDD); print "Connexion BDD reussie puis";echo "<br/>"; 
-//on parcourt la bdd pour chercher l'existence du login mot et du mot de passe saisis par l'internaute 
-//et on range le résultat dans le tableau $data
-$sql = 'SELECT count(*) FROM enfants WHERE NOM'.mysql_escape_string($_POST['login']);
-$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
-$data = mysql_fetch_array($req);
-mysql_free_result($req);mysql_close();
-// si on obtient une réponse, alors l'utilisateur est un membre
-//on ouvre une session pour cet utilisateur et on le connecte à l'espace membre
-if ($data[0] == 1){
+require('./env/connect.php');
 session_start();
-$_SESSION['login'] = $_POST['login'];
-header('Location: espace-membre.php');
-exit();}
-//si le visiteur a saisi un mauvais login ou mot de passe, on ne trouve aucune réponse
-elseif ($data[0] == 0) {
-$erreur = 'Login ou mot de passe non reconnu !';echo $erreur; 
-echo"<br/><a href=\"index.php\">Accueil</a>";exit();}
-// sinon, il existe un problème dans la base de données
-else {
-$erreur = 'Plusieurs membres ont<br/>les memes login et mot de passe !';echo $erreur; 
-echo"<br/><a href=\"index.php\">Accueil</a>";exit();}}
-else {
-$erreur = 'Errreur de saisie !<br/>Au moins un des champs est vide !'; echo $erreur; 
-echo"<br/><a href=\"index.php\">Accueil</a>";exit();}}
+if (isset($_POST['username'])){
+  $username = stripslashes($_REQUEST['username']);
+  $username = mysqli_real_escape_string($conn, $username);
+    $query = "SELECT * FROM `users` WHERE username='$username'";
+  $result = mysqli_query($conn,$query) or die(mysql_error());
+  $rows = mysqli_num_rows($result);
+  if($rows==1){
+      $_SESSION['username'] = $username;
+      header("Location: index.php");
+  }else{
+    $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+  }
+}
 ?>
