@@ -10,7 +10,6 @@
     <?php 
     require ("./env/connect.php");
     require ("./env/connexion.php");
-*
 
     ?>
 </head>
