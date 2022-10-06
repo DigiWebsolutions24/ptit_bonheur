@@ -8,8 +8,8 @@
     <title>Les P'tit Bonheur</title>
     <link rel="stylesheet" href="./env/style.css">
     <?php 
-    require ("./env/connect.php");
-    require ("./env/connexion.php");
+    include ("./env/connect.php");
+    include ("./env/connexion.php");
 
     ?>
 </head>
