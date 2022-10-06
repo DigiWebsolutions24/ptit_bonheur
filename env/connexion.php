@@ -4,7 +4,7 @@ include ("connect.php");
 //on vérifie que le visiteur a correctement saisi puis envoyé le formulaire
 if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {{
 //on se connecte à la bdd
-$connexion = mysql_connect (SERVEUR, LOGIN, MDP);    
+$connexion = mysql_connect (SERVEUR, LOGIN);    
 if (!$connexion) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;}
 mysql_select_db (BDD); print "Connexion BDD reussie puis";echo "<br/>"; 
 //on parcourt la bdd pour chercher l'existence du login mot et du mot de passe saisis par l'internaute 
