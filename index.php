@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les P'tit Bonheur</title>
     <link rel="stylesheet" href="style.css">
-    <? php 
-    require ("connect.php");
+    <?php 
+    include ("connect.php");
 
     ?>
 </head>
