@@ -35,6 +35,10 @@ if (isset($_REQUEST['username'], $_REQUEST['password'])){
 <form class="box" action="" method="post">
     <h1 class="box-title">Inscription d'un enfant</h1>
 	<input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" required />
+    <select name="role" id="role">
+    <option value="admin">Administrateur</option>
+    <option value="users">Enfant</option>
+    </select>
     <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
     <input type="submit" name="submit" value="S'inscrire" class="box-button" />
     <p class="box-register">Déjà inscrit? <a href="login.php">Connectez-vous ici</a></p>
