@@ -2,7 +2,7 @@
 session_start();
 
 include('config.php');
-if (isset($_REQUEST['username'], $_REQUEST['password'])){
+if (isset($_REQUEST['username'], $_REQUEST['password']), $_REQUEST['role']){
 	// récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
 	$username = stripslashes($_REQUEST['username']);
 	$username = mysqli_real_escape_string($conn, $username); 
