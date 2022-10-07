@@ -34,7 +34,7 @@ if (isset($_POST['username'])){
 
 <form class="box" action="" method="post" name="login">
 <h1 class="box-logo box-title">
-  <a href="https://waytolearnx.com/">La MAM les P'tit Bonheur !</a>
+  La MAM les P'tit Bonheur !
 </h1>
 <h1 class="box-title">Connexion</h1>
 <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
