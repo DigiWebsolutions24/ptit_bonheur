@@ -17,7 +17,9 @@
 		<h1>
 			Bienvenue <?php echo $_SESSION['username'];	?>!
 		</h1>
-		<p>Bienvenue sur votre tableau de bord <?php echo $_SESSION['role'];?></p>
+		<p>Bienvenue sur votre tableau de bord <?php 
+		var_dump(isset($_SESSION['role'])); 
+		echo $_SESSION['role'];?></p>
 		<a href="logout.php">Déconnexion</a>
 		</div>
 	</body>
