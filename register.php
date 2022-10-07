@@ -13,7 +13,7 @@ if (isset($_REQUEST['username'], $_REQUEST['password'])){
     $role = stripslashes($_REQUEST['role']);
     $role = mysqli_real_escape_string($conn, $role);
 	//requéte SQL + mot de passe crypté
-    $queryEnfant = "INSERT into `enfants` (username, role, password)
+    $queryEnfant = "INSERT into `users` (username, role, password)
               VALUES ('$username', '$role', '".hash('sha256', $password)."')";
 	// Exécute la requête sur la base de données
     $res = mysqli_query($conn, $queryEnfant);
