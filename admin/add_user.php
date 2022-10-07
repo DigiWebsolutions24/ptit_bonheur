@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require('./config.php');
+require('../config.php');
 if (isset($_REQUEST['username'], $_REQUEST['role'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur 
   $username = stripslashes($_REQUEST['username']);
@@ -27,7 +27,7 @@ if (isset($_REQUEST['username'], $_REQUEST['role'], $_REQUEST['password'])){
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="./style.css" />
+<link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
