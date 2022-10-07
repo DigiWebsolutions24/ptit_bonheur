@@ -13,7 +13,7 @@ if (isset($_REQUEST['username'], $_REQUEST['role'], $_REQUEST['password'])){
   $type = stripslashes($_REQUEST['role']);
   $type = mysqli_real_escape_string($conn, $type);
   
-    $query = "INSERT into `users` (username, type, password)
+    $query = "INSERT into `users` (username, role, password)
           VALUES ('$username', '$type', '".hash('sha256', $password)."')";
     $res = mysqli_query($conn, $query);
     if($res){
