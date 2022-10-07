@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="../style.css" />
-</head>
-<body>
 <?php
-require('../config.php');
+require('./config.php');
 if (isset($_REQUEST['username'], $_REQUEST['role'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur 
   $username = stripslashes($_REQUEST['username']);
@@ -28,6 +22,13 @@ if (isset($_REQUEST['username'], $_REQUEST['role'], $_REQUEST['password'])){
     }
 }else{
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
 <form class="box" action="" method="post">
   <h1 class="box-logo box-title">
    La Mam LES PTIT BONHEUR
