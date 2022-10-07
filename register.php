@@ -9,9 +9,12 @@ if (isset($_REQUEST['username'], $_REQUEST['password'])){
 	// récupérer le mot de passe et supprimer les antislashes ajoutés par le formulaire
 	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($conn, $password);
+    // récuperer le role de l'utilisateur
+    $role = stripslashes($_REQUEST['role']);
+    $role = mysqli_real_escape_string($conn, $role);
 	//requéte SQL + mot de passe crypté
-    $queryEnfant = "INSERT into `enfants` (username, password)
-              VALUES ('$username', '".hash('sha256', $password)."')";
+    $queryEnfant = "INSERT into `enfants` (username, role, password)
+              VALUES ('$username', '$role', '".hash('sha256', $password)."')";
 	// Exécute la requête sur la base de données
     $res = mysqli_query($conn, $queryEnfant);
     if($res){
