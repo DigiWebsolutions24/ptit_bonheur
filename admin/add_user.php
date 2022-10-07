@@ -10,11 +10,11 @@ if (isset($_REQUEST['username'], $_REQUEST['role'], $_REQUEST['password'])){
   $password = stripslashes($_REQUEST['password']);
   $password = mysqli_real_escape_string($conn, $password);
   // récupérer le type (user | admin)
-  $type = stripslashes($_REQUEST['role']);
-  $type = mysqli_real_escape_string($conn, $type);
+  $role = stripslashes($_REQUEST['role']);
+  $role = mysqli_real_escape_string($conn, $role);
   
     $query = "INSERT into `users` (username, role, password)
-          VALUES ('$username', '$type', '".hash('sha256', $password)."')";
+          VALUES ('$username', '$role', '".hash('sha256', $password)."')";
     $res = mysqli_query($conn, $query);
     if($res){
        echo "<div class='sucess'>
@@ -40,7 +40,7 @@ if (isset($_REQUEST['username'], $_REQUEST['role'], $_REQUEST['password'])){
   placeholder="Nom d'utilisateur" required />
   
   <div>
-      <select class="box-input" name="type" id="type" >
+      <select class="box-input" name="role" id="role" >
         <option value="" disabled selected>Role</option>
         <option value="admin">Admin</option>
         <option value="users">Enfant</option>
