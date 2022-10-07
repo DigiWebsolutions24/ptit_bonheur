@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<div class="sucess">
-		<h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
+		<h1>Bienvenue <?php echo $_SESSION['username']; echo $_SESSION['role']; ?>!</h1>
 		<p>Bienvenue sur votre tableau de bord</p>
 		<a href="logout.php">Déconnexion</a>
 		</div>
