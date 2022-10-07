@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require('./config.php');
 if (isset($_REQUEST['username'], $_REQUEST['role'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur 
