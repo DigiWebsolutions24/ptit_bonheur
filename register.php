@@ -38,7 +38,7 @@ if (isset($_REQUEST['username'], $_REQUEST['password'])){
     <select name="role" id="role">
     <option value="admin">Administrateur</option>
     <option value="users">Enfant</option>
-    </select>
+    </select><br/>
     <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
     <input type="submit" name="submit" value="S'inscrire" class="box-button" />
     <p class="box-register">Déjà inscrit? <a href="login.php">Connectez-vous ici</a></p>
